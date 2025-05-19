@@ -1,0 +1,19 @@
+<!DOCTYPE html><!-- НЕ РАБОТАЕТ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+</head>
+<body>
+  <iframe id='fp_embed_player' style="background-color: black;"
+    src='https://wcs5-eu.flashphoner.com:8888/embed_player?urlServer=wss://wcs5-eu.flashphoner.com:8443&streamName=ovStream1967&mediaProviders=WebRTC,MSE'
+    marginwidth='0' marginheight='0' frameborder='0' width='1280' height='720' scrolling='no' allowfullscreen='allowfullscreen'>
+  </iframe>
+  <script>
+    document.querySelector('iframe').addEventListener('load', function() {
+      console.log('Iframe is loaded!'); 
+    });
+  </script><!-- script для определения загрузки iframe -->
+</body>
+</html>

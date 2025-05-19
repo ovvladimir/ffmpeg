@@ -1,0 +1,28 @@
+<!DOCTYPE html><!-- НЕ РАБОТАЕТ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.min.js"></script>
+</head>
+<body>
+  <!--object type="application/x-shockwave-flash" data="http://127.0.0.1:1234/live/stream1234.flv" width="500" height="300">
+     <param name="movie" value="player_flv_maxi.swf" />
+     <param name="FlashVars" value="flv=http://127.0.0.1:1234/live/stream1234.flv" />
+</object-->
+  <video id="videoElement" width="640" style="background-color: black;"></video>
+  <script>
+      if (flvjs.isSupported()) {
+          var videoElement = document.getElementById('videoElement');
+          var flvPlayer = flvjs.createPlayer({
+              type: 'flv',
+              url: 'udp://l27.0.0.1:1234?listen'
+          });
+          flvPlayer.attachMediaElement(videoElement);
+          flvPlayer.load();
+          flvPlayer.play();
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+https://flashphoner.com/tyanem-rolik-s-youtube-i-razdaem-po-webrtc-v-realtajme/?lang=ru
+https://flashphoner.com/vstraivaem-webrtc-pleer-dlya-jivih-translyacii-na-sait/?lang=ru
+https://github.com/flashphoner/flashphoner_client/blob/wcs_api-2.0/examples/min/streaming.html
+https://habr.com/ru/company/flashphoner/blog/327214/
+https://habr.com/ru/companies/flashphoner/articles/568664/
+
+1. 	pip install --upgrade youtube-dl
+
+2. 	wget http://ffmpeg.org/releases/ffmpeg-3.3.4.tar.bz2
+	tar -xvjf ffmpeg-3.3.4.tar.bz2
+	cd  ffmpeg-3.3.4
+	./configure --enable-shared --disable-logging --enable-gpl --enable-pthreads --enable-libx264 --enable-librtmp
+	make
+	make install

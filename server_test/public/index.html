@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
+  <link href="https://vjs.zencdn.net/8.23.3/video-js.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <h1>{header}</h1>
+  <video controls="controls" width="640" height="480" autoplay="autoplay" muted="" preload="" style="background-color: black;">
+    <source src="./media/out.webm" type='video/webm;codecs="vp9,vorbis"' />
+  </video>
+  <video controls="controls" width="640" height="480" autoplay muted preload="none" style="background-color: black;">
+    <source src="http://127.0.0.1:1234/mystream.ffm" type='video/webm' />
+    <source src="/mystream.ffm" type='video/webm' />
+  </video>
+  <p>{message}</p>
+</body>
+
+<!--script src="https://vjs.zencdn.net/8.23.3/video.min.js"></script>
+<script>
+  var player = videojs('video');
+  player.play();
+</script-->
+</html>

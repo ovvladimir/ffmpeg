@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Таблица</title>
+<link rel="icon" href="" tуpe="imagе/x-icon">
+<style>
+*{
+	margin:0px;
+	padding:0px;
+	}
+
+.wrapper{
+	height:auto;
+	width:1100px;
+	margin-left:auto;
+	margin-right:auto; 	
+	background-color: #999; 
+	border: 5px solid   #900; 
+  	}
+
+.header{
+	height:50px;
+	width:1100px;
+	background-color: #00F;
+ 	vertical-align:center;
+	text-align: center;
+	color:#FFF	
+	}
+
+.body{
+	height:auto;
+	width:1100px;
+	background-color: #FFF;
+	color:#FFF
+	}
+
+.footer{
+ 	width:1100px;
+	min-height:50px;
+	background-color:#900;	 
+	color:#FFF
+	}
+
+p{
+	color: #F0F;
+	font-family: Verdana;
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 5px;
+	padding-left: 50px;
+	}
+
+.tableindex {
+	width: 280px;
+	display: table;
+	-webkit-box-shadow: 1px 1px 1px 1px  #3300FF;
+	box-shadow: 2px 2px 2px 2px  #CC0000;
+	font-family: "Book Antiqua";
+	border: "11";
+	border-spacing: 0.2rem;
+	margin-left:auto;
+	margin-right:auto;
+ 	font-size: 15px;
+	margin-top:15px;
+	}
+
+.tableindextr {
+    width: 25%;
+    height: 100%;
+    display: table-ROW;
+	}
+ 
+.tableindextd {
+    padding:5px;
+    width: 25%;
+    height: 100%;
+    display: table-cell;
+    border: 1px solid  #C03; 
+    text-align: left;
+  	color: #000; 
+	}
+
+.tableindexth {
+    background-color: rgb(153,0,0);
+    color:#FFF;
+    padding:5px;
+    width: 25%;
+    height: 100%;
+    display: table-cell;
+    border: 1px solid #808080;
+    font-weight: bold;
+    text-align: center;
+    font-size: 21px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="header">
+			<h1>AmoCRM</h1>
+		</div>
+
+		<div class="body">
+
+			<p>2019 год</p>
+			<p>&nbsp;</p>
+
+			<div class="tableindex">
+
+				<div class="tableindextr">
+					{% for c in range(colscount) %}
+					<div class="tableindexth">{{headerdata[c]}}</div>
+					{% endfor %}
+				</div>
+					{% for i in range(rowscount) %}
+				<div class="tableindextr">
+					{% for c in range(colscount) %}
+					<div class="tableindextd">{{totalrows[i][c]}}</div>
+					{% endfor %}
+				</div>
+					{% endfor %}
+
+			</div>	 
+
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+
+		</div>
+
+		<div class="footer">
+			<marquee scrollamount="2" behavior="alternate"> <h1>www.tomoru.ru</h1></marquee>
+		</div>
+
+	</div>
+      
+</body>
+</html>

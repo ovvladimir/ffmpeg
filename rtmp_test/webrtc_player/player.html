@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+  <link rel="stylesheet" href="./bootstrap-5.2.3/bootstrap.min.css">
+  <script language="javascript" src="./js/flashphoner.min.js"></script>
+  <script language="javascript" src="./js/player.js"></script>
+</head>
+<body onLoad="init()">
+  <div class="p-4">
+    <h2 class="text-primary">The player</h2>
+    <div id="remoteVideo" style="width:1280px; height:720px; background-color: black;"></div>
+    <input id="status" class="btn btn-primary my-4" style="width: 1280px;" type="button" value="S T A R T" onClick="start()" autofocus />
+  </div>
+  <script>
+    const button = document.querySelector('.btn');
+    button.addEventListener("click", (event) => {
+        const elem = event.target;
+        elem.classList.add('btn-danger');
+    })
+  </script>
+</body>
+</html>

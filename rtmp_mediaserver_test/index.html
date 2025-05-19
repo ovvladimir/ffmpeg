@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STREAM</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./index/img/favicon-32x32.png">
+  <link rel="stylesheet" href="./index/css/style.css">
+    <!--script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.min.js"></script-->
+    <script src="./index/js/flv.min.js"></script>
+</head>
+<body>
+  <h1>{header}</h1>
+  <video id="videoElement" width="640" height="480" autoplay muted preload="none"></video><!-- controls -->
+  <p>{message}</p>
+  <script>
+    if (flvjs.isSupported()) {
+        const videoElement = document.getElementById('videoElement');
+        const flvPlayer = flvjs.createPlayer({
+            type: 'flv',
+            url: 'ws://127.0.0.1:8443/live/ovStream1967.flv'
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }
+  </script>
+</body>
+</html>
